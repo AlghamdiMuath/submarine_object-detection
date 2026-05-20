@@ -1,0 +1,13 @@
+// Underwater Video Processing Workflow
+digraph {
+	rankdir=LR size=10
+	A [label="1. Video Recorded Underwater" color=lightblue shape=ellipse style=filled]
+	B [label="2. Transmitted to Outer Operator
+(Original & Preprocessed Video)" color=lightgrey shape=rect style=filled]
+	C [label="3. Stored Locally & on AWS S3 Bucket
+(Lifecycle Policies Implemented)" color=lightyellow shape=rect style=filled]
+	D [label="4. Remote Access by Scientists" color=lightgreen shape=ellipse style=filled]
+	A -> B [label=Transmission]
+	B -> C [label="Storage After Mission"]
+	C -> D [label="Immediate Access"]
+}
